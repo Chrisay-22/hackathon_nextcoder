@@ -31,13 +31,33 @@ from rich.progress import Progress
 
 console = Console()
 
-RESULTS_DIR = Path("challenge-02-sports-mapping/results")
+# Use relative paths (works when cloned)
+SCRIPT_DIR = Path(__file__).parent.resolve()
+RESULTS_DIR = SCRIPT_DIR.parent / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # City bounding boxes [west, south, east, north]
 CITY_BBOX = {
+    # Berlin
     'berlin': [13.088, 52.338, 13.761, 52.675],
-    'berlin_center': [13.35, 52.49, 13.45, 52.54],  # Smaller test area (Mitte)
+    'berlin_mitte': [13.35, 52.49, 13.45, 52.54],
+    'berlin_charlottenburg': [13.23, 52.48, 13.35, 52.55],
+    'berlin_friedrichshain': [13.42, 52.50, 13.48, 52.54],
+    'berlin_kreuzberg': [13.38, 52.48, 13.43, 52.51],
+    'berlin_neukoelln': [13.40, 52.43, 13.50, 52.49],
+    'berlin_pankow': [13.37, 52.54, 13.46, 52.62],
+    'berlin_spandau': [13.15, 52.52, 13.26, 52.58],
+    'berlin_steglitz': [13.30, 52.42, 13.38, 52.47],
+    
+    # Düsseldorf
+    'duesseldorf': [6.685, 51.125, 6.950, 51.330],
+    'duesseldorf_altstadt': [6.76, 51.22, 6.78, 51.23],
+    'duesseldorf_stadtmitte': [6.77, 51.22, 6.80, 51.24],
+    'duesseldorf_pempelfort': [6.78, 51.23, 6.82, 51.25],
+    'duesseldorf_oberkassel': [6.73, 51.22, 6.76, 51.25],
+    'duesseldorf_bilk': [6.77, 51.21, 6.80, 51.22],
+    'duesseldorf_unterrath': [6.79, 51.26, 6.84, 51.29],
+    'duesseldorf_benrath': [6.87, 51.15, 6.92, 51.18],
 }
 
 
@@ -61,8 +81,20 @@ class RooftopDetector:
     def authenticate(self, username: str = None, password: str = None) -> bool:
         """Authenticate with Copernicus Data Space."""
         # Try to load from credentials file first
-        creds_file = Path("C:/Repos/copernicus_credentials.json")
-        if not username and creds_file.exists():
+        # Check multiple locations: 1) Repo root, 2) Parent directory, 3) Absolute path
+        possible_creds = [
+            SCRIPT_DIR.parent / "copernicus_credentials.json",  # In repo root
+            Path.home() / ".copernicus_credentials.json",  # User home
+            Path("C:/Repos/copernicus_credentials.json")  # Legacy absolute path
+        ]
+        
+        creds_file = None
+        for path in possible_creds:
+            if path.exists():
+                creds_file = path
+                break
+        
+        if not username and creds_file:
             try:
                 with open(creds_file, 'r') as f:
                     creds = json.load(f)
