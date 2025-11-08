@@ -251,7 +251,7 @@ class RooftopDetector:
                 "data": [{
                     "dataFilter": {
                         "timeRange": {
-                            "from": f"{(datetime.now() - timedelta(days=90)).strftime('%Y-%m-%d')}T00:00:00Z",
+                            "from": f"{(datetime.now() - timedelta(days=180)).strftime('%Y-%m-%d')}T00:00:00Z",
                             "to": f"{datetime.now().strftime('%Y-%m-%d')}T23:59:59Z"
                         },
                         "maxCloudCoverage": 30
@@ -446,13 +446,13 @@ class RooftopDetector:
                     mean_height = float(np.mean(dem_values))
                     mean_slope = float(np.mean(slope_values))
                     
-                    # Filter by slope (flat roofs < 10°)
-                    if mean_slope > 10.0:
+                    # Filter by slope (flat roofs < 15° - relaxed from 10°)
+                    if mean_slope > 15.0:
                         filtered_count["slope"] += 1
                         continue
                     
-                    # Filter by height (buildings > 10m)
-                    if mean_height < 10.0:
+                    # Filter by height (buildings > 8m - relaxed from 10m)
+                    if mean_height < 8.0:
                         filtered_count["height"] += 1
                         continue
             
@@ -493,11 +493,8 @@ class RooftopDetector:
             filter_msg += f", {filtered_count['slope']} too steep, {filtered_count['height']} too low"
         console.print(filter_msg, style="dim")
         
-        # Sort by suitability score and keep top 500
+        # Sort by suitability score (no per-tile limit - will limit globally)
         features.sort(key=lambda x: x['properties']['suitability_score'], reverse=True)
-        if len(features) > 500:
-            console.print(f"   Limited to top 500 rooftops (from {len(features)})", style="yellow")
-            features = features[:500]
         
         console.print(f"✅ Found {len(features)} rooftop candidates", style="green")
         return features
@@ -569,14 +566,24 @@ def process_city_tiled(city: str, detector: RooftopDetector, tile_size_deg: floa
     console.print(f"🗺️ Processing {len(tiles)} tiles for full coverage\n", style="cyan")
     
     all_features = []
+    tile_stats = []  # Track statistics per tile
+    
     for i, tile_bbox in enumerate(tiles, 1):
-        console.print(f"📍 Tile {i}/{len(tiles)}: {tile_bbox}", style="dim")
+        tile_center_lat = (tile_bbox[1] + tile_bbox[3]) / 2
+        tile_center_lon = (tile_bbox[0] + tile_bbox[2]) / 2
+        console.print(f"📍 Tile {i}/{len(tiles)}: Center ({tile_center_lat:.3f}, {tile_center_lon:.3f})", style="dim")
         
         # Fetch imagery for this tile
         rgb_nir = detector.fetch_sentinel2_cloudless_mosaic(tile_bbox)
         
         if rgb_nir is None:
-            console.print(f"   ⚠️ Skipping tile {i} (no data)", style="yellow")
+            console.print(f"   ⚠️ Skipping tile {i} (no data/too cloudy)", style="yellow")
+            tile_stats.append({
+                'tile': i,
+                'center': (tile_center_lat, tile_center_lon),
+                'rooftops': 0,
+                'status': 'no_data'
+            })
             continue
         
         # Fetch DEM for this tile
@@ -586,6 +593,24 @@ def process_city_tiled(city: str, detector: RooftopDetector, tile_size_deg: floa
         features = detector.detect_rooftops_from_imagery(rgb_nir, tile_bbox, dem)
         all_features.extend(features)
         console.print(f"   ✅ Found {len(features)} rooftops in tile {i}\n", style="green")
+        
+        tile_stats.append({
+            'tile': i,
+            'center': (tile_center_lat, tile_center_lon),
+            'rooftops': len(features),
+            'status': 'success'
+        })
+    
+    # Print tile summary
+    console.print("\n" + "="*60, style="cyan")
+    console.print("📊 TILE PROCESSING SUMMARY", style="bold cyan")
+    console.print("="*60, style="cyan")
+    for stat in tile_stats:
+        status_icon = "✅" if stat['status'] == 'success' else "❌"
+        console.print(f"{status_icon} Tile {stat['tile']}: Lat {stat['center'][0]:.3f}, "
+                     f"Lon {stat['center'][1]:.3f} → {stat['rooftops']} rooftops", 
+                     style="dim")
+    console.print("="*60 + "\n", style="cyan")
     
     return all_features
 
