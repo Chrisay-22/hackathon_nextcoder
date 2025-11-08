@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_062f9957a4e6130163ea8d142b3518d0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_062f9957a4e6130163ea8d142b3518d0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_062f9957a4e6130163ea8d142b3518d0 = L.map(
+                "map_062f9957a4e6130163ea8d142b3518d0",
+                {
+                    center: [51.225, 6.800000000000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7eb6b79f5144da275e426de4f5c26041 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7eb6b79f5144da275e426de4f5c26041.addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var marker_7c472c7f65adde7b7c462978538ca381 = L.marker(
+                [51.2153657, 6.8067175],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_810c3c40ecd5d760c38cb3ebd0ccf17d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8a861d1830636e674b646c4f91ee967 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5c3f6345ee927fa0116dc0621a0859f = $(`<div id="html_a5c3f6345ee927fa0116dc0621a0859f" style="width: 100.0%; height: 100.0%;">OSM: Body & Mind</div>`)[0];
+                popup_a8a861d1830636e674b646c4f91ee967.setContent(html_a5c3f6345ee927fa0116dc0621a0859f);
+            
+        
+
+        marker_7c472c7f65adde7b7c462978538ca381.bindPopup(popup_a8a861d1830636e674b646c4f91ee967)
+        ;
+
+        
+    
+    
+                marker_7c472c7f65adde7b7c462978538ca381.setIcon(icon_810c3c40ecd5d760c38cb3ebd0ccf17d);
+            
+    
+            var marker_780608f50e15ee705948d40858eced20 = L.marker(
+                [51.2253895, 6.7813429],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_d88f573d33d8921d847db57cac4aaa2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb07795ba19835b37984a567366ef30f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9940f0b0944b15ced37b43c25044cf5 = $(`<div id="html_b9940f0b0944b15ced37b43c25044cf5" style="width: 100.0%; height: 100.0%;">OSM: Fitness First</div>`)[0];
+                popup_bb07795ba19835b37984a567366ef30f.setContent(html_b9940f0b0944b15ced37b43c25044cf5);
+            
+        
+
+        marker_780608f50e15ee705948d40858eced20.bindPopup(popup_bb07795ba19835b37984a567366ef30f)
+        ;
+
+        
+    
+    
+                marker_780608f50e15ee705948d40858eced20.setIcon(icon_d88f573d33d8921d847db57cac4aaa2a);
+            
+    
+            var marker_bfbb85d89e585e9d487f3f041f17cd3c = L.marker(
+                [51.2208016, 6.7781258],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_fd174ab08e2ba778269faab52ab0334b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_133dd85989a06af91373004a4b77f8e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41bad9892cbbf324a63421105a9894c9 = $(`<div id="html_41bad9892cbbf324a63421105a9894c9" style="width: 100.0%; height: 100.0%;">OSM: Holmes Place</div>`)[0];
+                popup_133dd85989a06af91373004a4b77f8e0.setContent(html_41bad9892cbbf324a63421105a9894c9);
+            
+        
+
+        marker_bfbb85d89e585e9d487f3f041f17cd3c.bindPopup(popup_133dd85989a06af91373004a4b77f8e0)
+        ;
+
+        
+    
+    
+                marker_bfbb85d89e585e9d487f3f041f17cd3c.setIcon(icon_fd174ab08e2ba778269faab52ab0334b);
+            
+    
+            var marker_1d5f62459f183c1afd5c9a01ddcaca84 = L.marker(
+                [51.2144913, 6.8214873],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_28c6f13160dc0fb7bf1d64043eee91c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3bf477b87d479a653da4d80b48f6ead3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b58d0bd0c28f10754c6ed7ee80a860fc = $(`<div id="html_b58d0bd0c28f10754c6ed7ee80a860fc" style="width: 100.0%; height: 100.0%;">OSM: McFit</div>`)[0];
+                popup_3bf477b87d479a653da4d80b48f6ead3.setContent(html_b58d0bd0c28f10754c6ed7ee80a860fc);
+            
+        
+
+        marker_1d5f62459f183c1afd5c9a01ddcaca84.bindPopup(popup_3bf477b87d479a653da4d80b48f6ead3)
+        ;
+
+        
+    
+    
+                marker_1d5f62459f183c1afd5c9a01ddcaca84.setIcon(icon_28c6f13160dc0fb7bf1d64043eee91c0);
+            
+    
+            var marker_de5c063d2f6a40b0765d0af8debe2caf = L.marker(
+                [51.2104676, 6.7886597],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_ae70aef19921bfd86f1537aae489c8a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86533ef1e489e937ced4d472d4dc7fb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b63f3545293abc92a11cd0dbc5a0ff97 = $(`<div id="html_b63f3545293abc92a11cd0dbc5a0ff97" style="width: 100.0%; height: 100.0%;">OSM: Fit In</div>`)[0];
+                popup_86533ef1e489e937ced4d472d4dc7fb6.setContent(html_b63f3545293abc92a11cd0dbc5a0ff97);
+            
+        
+
+        marker_de5c063d2f6a40b0765d0af8debe2caf.bindPopup(popup_86533ef1e489e937ced4d472d4dc7fb6)
+        ;
+
+        
+    
+    
+                marker_de5c063d2f6a40b0765d0af8debe2caf.setIcon(icon_ae70aef19921bfd86f1537aae489c8a5);
+            
+    
+            var marker_1e313b5cf7dec7de253ffd0b191896c6 = L.marker(
+                [51.1965452, 6.8119181],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_ee62188806640b893df2d1e03d4d1a22 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b197d861ec6734e098387f2905d2402b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_226e42539c1cb4f79fad8c6939778b1a = $(`<div id="html_226e42539c1cb4f79fad8c6939778b1a" style="width: 100.0%; height: 100.0%;">OSM: Holmes Place</div>`)[0];
+                popup_b197d861ec6734e098387f2905d2402b.setContent(html_226e42539c1cb4f79fad8c6939778b1a);
+            
+        
+
+        marker_1e313b5cf7dec7de253ffd0b191896c6.bindPopup(popup_b197d861ec6734e098387f2905d2402b)
+        ;
+
+        
+    
+    
+                marker_1e313b5cf7dec7de253ffd0b191896c6.setIcon(icon_ee62188806640b893df2d1e03d4d1a22);
+            
+    
+            var marker_65e1af6988c6dce479e4cecba009952b = L.marker(
+                [51.2575971, 6.8036009],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_e93105bde6a65f74d02a72651d157bac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb3fb1c6bafcb212dd808cad0e461d22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba85303341451f5f0e9e13b6a6598496 = $(`<div id="html_ba85303341451f5f0e9e13b6a6598496" style="width: 100.0%; height: 100.0%;">OSM: Fitklusiv</div>`)[0];
+                popup_cb3fb1c6bafcb212dd808cad0e461d22.setContent(html_ba85303341451f5f0e9e13b6a6598496);
+            
+        
+
+        marker_65e1af6988c6dce479e4cecba009952b.bindPopup(popup_cb3fb1c6bafcb212dd808cad0e461d22)
+        ;
+
+        
+    
+    
+                marker_65e1af6988c6dce479e4cecba009952b.setIcon(icon_e93105bde6a65f74d02a72651d157bac);
+            
+    
+            var marker_467f7dec36c90b8f95c02a9db0ee2c12 = L.marker(
+                [51.2288617, 6.7910246],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_3a9477f26dfc2a13972d4ca27028471c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8af3bb880957fe8065c4b29bfe1946fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ea84fc8b4271ef66394b450a50e2a1b = $(`<div id="html_0ea84fc8b4271ef66394b450a50e2a1b" style="width: 100.0%; height: 100.0%;">OSM: Olymp</div>`)[0];
+                popup_8af3bb880957fe8065c4b29bfe1946fd.setContent(html_0ea84fc8b4271ef66394b450a50e2a1b);
+            
+        
+
+        marker_467f7dec36c90b8f95c02a9db0ee2c12.bindPopup(popup_8af3bb880957fe8065c4b29bfe1946fd)
+        ;
+
+        
+    
+    
+                marker_467f7dec36c90b8f95c02a9db0ee2c12.setIcon(icon_3a9477f26dfc2a13972d4ca27028471c);
+            
+    
+            var marker_c352554827f14910c867ed343f7a7074 = L.marker(
+                [51.2186539, 6.8135458],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_70bb0ce1185b5f229e9dfcb27efad56d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a69a324ba48511e9851c0460ba13053e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34e5593cf32b5fb2942e632470fe2873 = $(`<div id="html_34e5593cf32b5fb2942e632470fe2873" style="width: 100.0%; height: 100.0%;">OSM: City Fitness</div>`)[0];
+                popup_a69a324ba48511e9851c0460ba13053e.setContent(html_34e5593cf32b5fb2942e632470fe2873);
+            
+        
+
+        marker_c352554827f14910c867ed343f7a7074.bindPopup(popup_a69a324ba48511e9851c0460ba13053e)
+        ;
+
+        
+    
+    
+                marker_c352554827f14910c867ed343f7a7074.setIcon(icon_70bb0ce1185b5f229e9dfcb27efad56d);
+            
+    
+            var marker_54918f638ee6f7ec7192718e1e68336a = L.marker(
+                [51.2095289, 6.7586202],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_4073b85d3684847cbe96b60afedcbcd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d677b2e8213fb346fd464555284ba37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b627b1665a2ef647ff48844bff8d3df0 = $(`<div id="html_b627b1665a2ef647ff48844bff8d3df0" style="width: 100.0%; height: 100.0%;">OSM: JOHN REED Club Düsseldorf-Bilk</div>`)[0];
+                popup_0d677b2e8213fb346fd464555284ba37.setContent(html_b627b1665a2ef647ff48844bff8d3df0);
+            
+        
+
+        marker_54918f638ee6f7ec7192718e1e68336a.bindPopup(popup_0d677b2e8213fb346fd464555284ba37)
+        ;
+
+        
+    
+    
+                marker_54918f638ee6f7ec7192718e1e68336a.setIcon(icon_4073b85d3684847cbe96b60afedcbcd9);
+            
+    
+            var marker_e49619ef9b3e626ad2298fff5e0135f0 = L.marker(
+                [51.2325146, 6.7239238],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_97276eade8e257fc09faa6459fc32523 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ce96a2c0a9d1cda35c5f3c672766033 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b71d37f359021c78e31a5cbdb5d53d05 = $(`<div id="html_b71d37f359021c78e31a5cbdb5d53d05" style="width: 100.0%; height: 100.0%;">OSM: Dorn Uysal Personal Training</div>`)[0];
+                popup_3ce96a2c0a9d1cda35c5f3c672766033.setContent(html_b71d37f359021c78e31a5cbdb5d53d05);
+            
+        
+
+        marker_e49619ef9b3e626ad2298fff5e0135f0.bindPopup(popup_3ce96a2c0a9d1cda35c5f3c672766033)
+        ;
+
+        
+    
+    
+                marker_e49619ef9b3e626ad2298fff5e0135f0.setIcon(icon_97276eade8e257fc09faa6459fc32523);
+            
+    
+            var marker_c1565050fb4342f2ddc5c9539cb72f04 = L.marker(
+                [51.2025342, 6.774778],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_10f1392fefb930e2fff54c5fc2d2d82c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54ef7ae75006c4b1a3891fe0be6bd106 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d5a09bb63b192d91f689a78cfc22c3da = $(`<div id="html_d5a09bb63b192d91f689a78cfc22c3da" style="width: 100.0%; height: 100.0%;">OSM: Personaltrainerin Linda Hönemann</div>`)[0];
+                popup_54ef7ae75006c4b1a3891fe0be6bd106.setContent(html_d5a09bb63b192d91f689a78cfc22c3da);
+            
+        
+
+        marker_c1565050fb4342f2ddc5c9539cb72f04.bindPopup(popup_54ef7ae75006c4b1a3891fe0be6bd106)
+        ;
+
+        
+    
+    
+                marker_c1565050fb4342f2ddc5c9539cb72f04.setIcon(icon_10f1392fefb930e2fff54c5fc2d2d82c);
+            
+    
+            var marker_797552908644143936faf062c9f17de0 = L.marker(
+                [51.2671042, 6.8309118],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_d540a3b4a5465133134987b39fdd51cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_705c63e4483c7be3ac091ec3dca8a09b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_134807639c8f33ecc318a489d8a4eb97 = $(`<div id="html_134807639c8f33ecc318a489d8a4eb97" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 5807883565</div>`)[0];
+                popup_705c63e4483c7be3ac091ec3dca8a09b.setContent(html_134807639c8f33ecc318a489d8a4eb97);
+            
+        
+
+        marker_797552908644143936faf062c9f17de0.bindPopup(popup_705c63e4483c7be3ac091ec3dca8a09b)
+        ;
+
+        
+    
+    
+                marker_797552908644143936faf062c9f17de0.setIcon(icon_d540a3b4a5465133134987b39fdd51cd);
+            
+    
+            var marker_5655a0a3381bbf0371ffcf9a1888a102 = L.marker(
+                [51.1995508, 6.8849558],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_99905d6296e0036406fe7f33c01ba345 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e61e4d407b1ced3deef685a178cd42f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c43956e5c7bba89fc403aacc3bb8b69a = $(`<div id="html_c43956e5c7bba89fc403aacc3bb8b69a" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 6624939971</div>`)[0];
+                popup_e61e4d407b1ced3deef685a178cd42f6.setContent(html_c43956e5c7bba89fc403aacc3bb8b69a);
+            
+        
+
+        marker_5655a0a3381bbf0371ffcf9a1888a102.bindPopup(popup_e61e4d407b1ced3deef685a178cd42f6)
+        ;
+
+        
+    
+    
+                marker_5655a0a3381bbf0371ffcf9a1888a102.setIcon(icon_99905d6296e0036406fe7f33c01ba345);
+            
+    
+            var marker_ec73aae1fd1e735ca57a2d45b26035d7 = L.marker(
+                [51.2472623, 6.8352946],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_506e8e02ffa2d4b1d60fb24441f70c71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6dd19e705d55cff2ba3b75fb619963e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e330b245e13a3a526ef618959feafe0 = $(`<div id="html_1e330b245e13a3a526ef618959feafe0" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 8443037320</div>`)[0];
+                popup_b6dd19e705d55cff2ba3b75fb619963e.setContent(html_1e330b245e13a3a526ef618959feafe0);
+            
+        
+
+        marker_ec73aae1fd1e735ca57a2d45b26035d7.bindPopup(popup_b6dd19e705d55cff2ba3b75fb619963e)
+        ;
+
+        
+    
+    
+                marker_ec73aae1fd1e735ca57a2d45b26035d7.setIcon(icon_506e8e02ffa2d4b1d60fb24441f70c71);
+            
+    
+            var marker_ae5dea2ea75190572c4bd4502f7c7657 = L.marker(
+                [51.247352, 6.8323754],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_ae0267640688e9a0ae6f284847ca5431 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd35352aa68c1ac26c52f8b0b99b98de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca76b0d78a3f4b72f61fe9eb450ef72f = $(`<div id="html_ca76b0d78a3f4b72f61fe9eb450ef72f" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 8443047619</div>`)[0];
+                popup_bd35352aa68c1ac26c52f8b0b99b98de.setContent(html_ca76b0d78a3f4b72f61fe9eb450ef72f);
+            
+        
+
+        marker_ae5dea2ea75190572c4bd4502f7c7657.bindPopup(popup_bd35352aa68c1ac26c52f8b0b99b98de)
+        ;
+
+        
+    
+    
+                marker_ae5dea2ea75190572c4bd4502f7c7657.setIcon(icon_ae0267640688e9a0ae6f284847ca5431);
+            
+    
+            var marker_718ab5d15ed0f26d384355ce1055d724 = L.marker(
+                [51.2473413, 6.832324],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_bcd3e631eba776d2abe96228ee0aee18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82b6bd3bcd61369fdd4f72ba3d9d1b33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33b6d157abb21e6eb700f4ef5effbd12 = $(`<div id="html_33b6d157abb21e6eb700f4ef5effbd12" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 8443507740</div>`)[0];
+                popup_82b6bd3bcd61369fdd4f72ba3d9d1b33.setContent(html_33b6d157abb21e6eb700f4ef5effbd12);
+            
+        
+
+        marker_718ab5d15ed0f26d384355ce1055d724.bindPopup(popup_82b6bd3bcd61369fdd4f72ba3d9d1b33)
+        ;
+
+        
+    
+    
+                marker_718ab5d15ed0f26d384355ce1055d724.setIcon(icon_bcd3e631eba776d2abe96228ee0aee18);
+            
+    
+            var marker_75422fe9965356299ed3bf7b46487114 = L.marker(
+                [51.3210107, 6.7962367],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_624749e8794f0146bb644d94391436f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1a7db8bbdff2fc362e103cadeae1c1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4872416326afe1285cf30ba76462657 = $(`<div id="html_c4872416326afe1285cf30ba76462657" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 8492178288</div>`)[0];
+                popup_e1a7db8bbdff2fc362e103cadeae1c1f.setContent(html_c4872416326afe1285cf30ba76462657);
+            
+        
+
+        marker_75422fe9965356299ed3bf7b46487114.bindPopup(popup_e1a7db8bbdff2fc362e103cadeae1c1f)
+        ;
+
+        
+    
+    
+                marker_75422fe9965356299ed3bf7b46487114.setIcon(icon_624749e8794f0146bb644d94391436f4);
+            
+    
+            var marker_133f7b3c4a128b2635b5434ba7fde90a = L.marker(
+                [51.2191012, 6.7799604],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_6611aeaacfbd48ac6db38e449271f572 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03c761cbb744156d0a2f93e23f25a02f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_176b8f993ab2d74cc79450bd03d6933c = $(`<div id="html_176b8f993ab2d74cc79450bd03d6933c" style="width: 100.0%; height: 100.0%;">OSM: Hammer</div>`)[0];
+                popup_03c761cbb744156d0a2f93e23f25a02f.setContent(html_176b8f993ab2d74cc79450bd03d6933c);
+            
+        
+
+        marker_133f7b3c4a128b2635b5434ba7fde90a.bindPopup(popup_03c761cbb744156d0a2f93e23f25a02f)
+        ;
+
+        
+    
+    
+                marker_133f7b3c4a128b2635b5434ba7fde90a.setIcon(icon_6611aeaacfbd48ac6db38e449271f572);
+            
+    
+            var marker_475b765eebafb254a95edbc1c6492139 = L.marker(
+                [51.1558206, 6.8787893],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_82298d944627430b155fbbe5afd7141e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_868378edfb28874e3a6df52a8c2f9bd0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2cb5ba39a5d412ff3a7dd13f02817821 = $(`<div id="html_2cb5ba39a5d412ff3a7dd13f02817821" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 10916239207</div>`)[0];
+                popup_868378edfb28874e3a6df52a8c2f9bd0.setContent(html_2cb5ba39a5d412ff3a7dd13f02817821);
+            
+        
+
+        marker_475b765eebafb254a95edbc1c6492139.bindPopup(popup_868378edfb28874e3a6df52a8c2f9bd0)
+        ;
+
+        
+    
+    
+                marker_475b765eebafb254a95edbc1c6492139.setIcon(icon_82298d944627430b155fbbe5afd7141e);
+            
+    
+            var marker_a66bbf519c6dae6270f03ef7817c0552 = L.marker(
+                [51.1493794, 6.8769253],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_ca81550bb8583a7d467770fd99be5dcb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a47c0a588a0f97e2974f4e8b6965340 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd97e7ddb37009eb5b59ef52270eb7ef = $(`<div id="html_dd97e7ddb37009eb5b59ef52270eb7ef" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 11217721090</div>`)[0];
+                popup_0a47c0a588a0f97e2974f4e8b6965340.setContent(html_dd97e7ddb37009eb5b59ef52270eb7ef);
+            
+        
+
+        marker_a66bbf519c6dae6270f03ef7817c0552.bindPopup(popup_0a47c0a588a0f97e2974f4e8b6965340)
+        ;
+
+        
+    
+    
+                marker_a66bbf519c6dae6270f03ef7817c0552.setIcon(icon_ca81550bb8583a7d467770fd99be5dcb);
+            
+    
+            var marker_8ea7fc6147664c965a564d777152ddf9 = L.marker(
+                [51.2315331, 6.8113055],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_94dfc3350a0cda4eafadea1b0a3a21b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b43d5faa88cfd6a62fd9e4e6b58681ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eaa3205224ae91f45f62e6c4f7479c84 = $(`<div id="html_eaa3205224ae91f45f62e6c4f7479c84" style="width: 100.0%; height: 100.0%;">OSM: Define Fitness</div>`)[0];
+                popup_b43d5faa88cfd6a62fd9e4e6b58681ce.setContent(html_eaa3205224ae91f45f62e6c4f7479c84);
+            
+        
+
+        marker_8ea7fc6147664c965a564d777152ddf9.bindPopup(popup_b43d5faa88cfd6a62fd9e4e6b58681ce)
+        ;
+
+        
+    
+    
+                marker_8ea7fc6147664c965a564d777152ddf9.setIcon(icon_94dfc3350a0cda4eafadea1b0a3a21b9);
+            
+    
+            var marker_824cd15189c6af7e305a5de859a046e7 = L.marker(
+                [51.2363461, 6.7948717],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_771b3270dd21b3fb3e1ba271f2d76ba7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a15617261c26df4dd385c8cce79c347 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0b2b1ed19c2d101ab438c76f3d9e235 = $(`<div id="html_a0b2b1ed19c2d101ab438c76f3d9e235" style="width: 100.0%; height: 100.0%;">OSM: EVO Le Flair</div>`)[0];
+                popup_7a15617261c26df4dd385c8cce79c347.setContent(html_a0b2b1ed19c2d101ab438c76f3d9e235);
+            
+        
+
+        marker_824cd15189c6af7e305a5de859a046e7.bindPopup(popup_7a15617261c26df4dd385c8cce79c347)
+        ;
+
+        
+    
+    
+                marker_824cd15189c6af7e305a5de859a046e7.setIcon(icon_771b3270dd21b3fb3e1ba271f2d76ba7);
+            
+    
+            var marker_0043df1b770ec875ca84319a26057718 = L.marker(
+                [51.2358382, 6.781924],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_d5080a0dfcac6e2f5061a7aac6022d65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f247a67f170dd444be325e096a7dde03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83c4882dd922503e7783184f961fd3ec = $(`<div id="html_83c4882dd922503e7783184f961fd3ec" style="width: 100.0%; height: 100.0%;">OSM: Brooklyn Fitboxing</div>`)[0];
+                popup_f247a67f170dd444be325e096a7dde03.setContent(html_83c4882dd922503e7783184f961fd3ec);
+            
+        
+
+        marker_0043df1b770ec875ca84319a26057718.bindPopup(popup_f247a67f170dd444be325e096a7dde03)
+        ;
+
+        
+    
+    
+                marker_0043df1b770ec875ca84319a26057718.setIcon(icon_d5080a0dfcac6e2f5061a7aac6022d65);
+            
+    
+            var marker_4c1b1455c23c670b491a7e23d4ce9486 = L.marker(
+                [51.2114418, 6.7627121],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_32054a7d344d1294d573b9521fc8b3e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2545b1be265cc9d5ea6ecef626e45364 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61f8a3794648e721a691257165090cb8 = $(`<div id="html_61f8a3794648e721a691257165090cb8" style="width: 100.0%; height: 100.0%;">OSM: EVO Unterbilk</div>`)[0];
+                popup_2545b1be265cc9d5ea6ecef626e45364.setContent(html_61f8a3794648e721a691257165090cb8);
+            
+        
+
+        marker_4c1b1455c23c670b491a7e23d4ce9486.bindPopup(popup_2545b1be265cc9d5ea6ecef626e45364)
+        ;
+
+        
+    
+    
+                marker_4c1b1455c23c670b491a7e23d4ce9486.setIcon(icon_32054a7d344d1294d573b9521fc8b3e9);
+            
+    
+            var marker_6cac1986dc1e15110d7bab9ccdcf2542 = L.marker(
+                [51.2671211, 6.8309496],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_0f36c8ca25f4fc8d2221c5e6f04c3b2c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d134e1c6555885dc842f6ec5e1f9ff9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40f8cdfc5241d4cd08188f86279648cb = $(`<div id="html_40f8cdfc5241d4cd08188f86279648cb" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 12551369836</div>`)[0];
+                popup_9d134e1c6555885dc842f6ec5e1f9ff9.setContent(html_40f8cdfc5241d4cd08188f86279648cb);
+            
+        
+
+        marker_6cac1986dc1e15110d7bab9ccdcf2542.bindPopup(popup_9d134e1c6555885dc842f6ec5e1f9ff9)
+        ;
+
+        
+    
+    
+                marker_6cac1986dc1e15110d7bab9ccdcf2542.setIcon(icon_0f36c8ca25f4fc8d2221c5e6f04c3b2c);
+            
+    
+            var marker_b6276aa8518d651d6582c2b0ed3ecf04 = L.marker(
+                [51.3068227, 6.8026207],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_0296c0814515f5b07a49d2345e855f29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6006bf2c9fd93c2979e055972db095e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad841357b4292fa6a0455de1a987861e = $(`<div id="html_ad841357b4292fa6a0455de1a987861e" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 12644237801</div>`)[0];
+                popup_6006bf2c9fd93c2979e055972db095e0.setContent(html_ad841357b4292fa6a0455de1a987861e);
+            
+        
+
+        marker_b6276aa8518d651d6582c2b0ed3ecf04.bindPopup(popup_6006bf2c9fd93c2979e055972db095e0)
+        ;
+
+        
+    
+    
+                marker_b6276aa8518d651d6582c2b0ed3ecf04.setIcon(icon_0296c0814515f5b07a49d2345e855f29);
+            
+    
+            var marker_0a0eab93a2182aefe3138b5a64ca7fc7 = L.marker(
+                [51.2402248, 6.7366544],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_4e48679daaa5e4b098b32468dc50d94b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7dedd17c2b932a089fbcb7f11099bfd6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a75503e1f5b587dcc017e4bdf821646 = $(`<div id="html_7a75503e1f5b587dcc017e4bdf821646" style="width: 100.0%; height: 100.0%;">OSM: Fit/One Lörick</div>`)[0];
+                popup_7dedd17c2b932a089fbcb7f11099bfd6.setContent(html_7a75503e1f5b587dcc017e4bdf821646);
+            
+        
+
+        marker_0a0eab93a2182aefe3138b5a64ca7fc7.bindPopup(popup_7dedd17c2b932a089fbcb7f11099bfd6)
+        ;
+
+        
+    
+    
+                marker_0a0eab93a2182aefe3138b5a64ca7fc7.setIcon(icon_4e48679daaa5e4b098b32468dc50d94b);
+            
+    
+            var marker_ab8ea0347e44442fc405ffb673b307ee = L.marker(
+                [51.2162753, 6.7989522],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_83be4d602edc64245f25f5862ccd1f56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_48b8dd95d275de8452f8622e3c082f63 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbbd7addd14dc5787f13d7604c30f6a3 = $(`<div id="html_fbbd7addd14dc5787f13d7604c30f6a3" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 13280134234</div>`)[0];
+                popup_48b8dd95d275de8452f8622e3c082f63.setContent(html_fbbd7addd14dc5787f13d7604c30f6a3);
+            
+        
+
+        marker_ab8ea0347e44442fc405ffb673b307ee.bindPopup(popup_48b8dd95d275de8452f8622e3c082f63)
+        ;
+
+        
+    
+    
+                marker_ab8ea0347e44442fc405ffb673b307ee.setIcon(icon_83be4d602edc64245f25f5862ccd1f56);
+            
+    
+            var marker_210a935896a472d0238bf80918953c07 = L.marker(
+                [51.2084816, 6.8435871],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_c3d0fbdce54f7e85ef5c749338e9bee4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_121a4f77aadf9fd6a5703fd0e6d04f1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0426f4c9ecc1fe32406eefa72f21ed12 = $(`<div id="html_0426f4c9ecc1fe32406eefa72f21ed12" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 113568095</div>`)[0];
+                popup_121a4f77aadf9fd6a5703fd0e6d04f1b.setContent(html_0426f4c9ecc1fe32406eefa72f21ed12);
+            
+        
+
+        marker_210a935896a472d0238bf80918953c07.bindPopup(popup_121a4f77aadf9fd6a5703fd0e6d04f1b)
+        ;
+
+        
+    
+    
+                marker_210a935896a472d0238bf80918953c07.setIcon(icon_c3d0fbdce54f7e85ef5c749338e9bee4);
+            
+    
+            var marker_00bc55fb67bd8edaf3fe6a3a7e3136c9 = L.marker(
+                [51.243105, 6.8038037],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_414051e1061b7e5ecbd609f5d87e045f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbdb90690c8d3e5586640184efc6ccd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbc730198f874daeda913a728aeeff0b = $(`<div id="html_dbc730198f874daeda913a728aeeff0b" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1017302805</div>`)[0];
+                popup_dbdb90690c8d3e5586640184efc6ccd8.setContent(html_dbc730198f874daeda913a728aeeff0b);
+            
+        
+
+        marker_00bc55fb67bd8edaf3fe6a3a7e3136c9.bindPopup(popup_dbdb90690c8d3e5586640184efc6ccd8)
+        ;
+
+        
+    
+    
+                marker_00bc55fb67bd8edaf3fe6a3a7e3136c9.setIcon(icon_414051e1061b7e5ecbd609f5d87e045f);
+            
+    
+            var marker_1fff60d4201220c209c6d0c77cefd255 = L.marker(
+                [51.1731603, 6.8127645],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_c05037b2d2795ce41c36a57e80dfda65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0b805fb06e75708146fa6bf610b660a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66f9a750cbfd4408cfebf73d42fdaf53 = $(`<div id="html_66f9a750cbfd4408cfebf73d42fdaf53" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1180730983</div>`)[0];
+                popup_f0b805fb06e75708146fa6bf610b660a.setContent(html_66f9a750cbfd4408cfebf73d42fdaf53);
+            
+        
+
+        marker_1fff60d4201220c209c6d0c77cefd255.bindPopup(popup_f0b805fb06e75708146fa6bf610b660a)
+        ;
+
+        
+    
+    
+                marker_1fff60d4201220c209c6d0c77cefd255.setIcon(icon_c05037b2d2795ce41c36a57e80dfda65);
+            
+    
+            var marker_d8c52be550693abe3fc21156091f1292 = L.marker(
+                [51.2630147, 6.8353284],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_c171f56fc0daad042a1cc595897ca9ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca8c7e3cd0a8f8ec7bd9dcf19ee7392a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d398baaec873eca302b4609bab6dd7a2 = $(`<div id="html_d398baaec873eca302b4609bab6dd7a2" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1190117810</div>`)[0];
+                popup_ca8c7e3cd0a8f8ec7bd9dcf19ee7392a.setContent(html_d398baaec873eca302b4609bab6dd7a2);
+            
+        
+
+        marker_d8c52be550693abe3fc21156091f1292.bindPopup(popup_ca8c7e3cd0a8f8ec7bd9dcf19ee7392a)
+        ;
+
+        
+    
+    
+                marker_d8c52be550693abe3fc21156091f1292.setIcon(icon_c171f56fc0daad042a1cc595897ca9ef);
+            
+    
+            var marker_ff7f1a0ada67b3764bed2d669556c7ed = L.marker(
+                [51.1704403, 6.8488219],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_1047e1abd710b3087f51fb7ddd6e1171 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d9b83c07b8b5a88269a94ea05b5f659 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76c81ed5d053d084db73f490fe34371a = $(`<div id="html_76c81ed5d053d084db73f490fe34371a" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1211788196</div>`)[0];
+                popup_8d9b83c07b8b5a88269a94ea05b5f659.setContent(html_76c81ed5d053d084db73f490fe34371a);
+            
+        
+
+        marker_ff7f1a0ada67b3764bed2d669556c7ed.bindPopup(popup_8d9b83c07b8b5a88269a94ea05b5f659)
+        ;
+
+        
+    
+    
+                marker_ff7f1a0ada67b3764bed2d669556c7ed.setIcon(icon_1047e1abd710b3087f51fb7ddd6e1171);
+            
+    
+            var marker_69fa5fa74abe10462b214ab2e7d874bd = L.marker(
+                [51.1701806, 6.8519619],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_1c97918b83bb781de4f13cb62c684991 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_654e95467d4cd960807e103b825c3666 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c929187c5e676235b238f01b0110ed0 = $(`<div id="html_9c929187c5e676235b238f01b0110ed0" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1234743897</div>`)[0];
+                popup_654e95467d4cd960807e103b825c3666.setContent(html_9c929187c5e676235b238f01b0110ed0);
+            
+        
+
+        marker_69fa5fa74abe10462b214ab2e7d874bd.bindPopup(popup_654e95467d4cd960807e103b825c3666)
+        ;
+
+        
+    
+    
+                marker_69fa5fa74abe10462b214ab2e7d874bd.setIcon(icon_1c97918b83bb781de4f13cb62c684991);
+            
+    
+            var marker_107d6c047d53e2d68f7cb30f0152ece6 = L.marker(
+                [51.1814689, 6.8299422],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_237c53d25b90a2f8a86dd5e58d5b19d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_efbe5070e524fc8769136d383af62923 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1767e80145dda87a24129f7a706dc406 = $(`<div id="html_1767e80145dda87a24129f7a706dc406" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1243651845</div>`)[0];
+                popup_efbe5070e524fc8769136d383af62923.setContent(html_1767e80145dda87a24129f7a706dc406);
+            
+        
+
+        marker_107d6c047d53e2d68f7cb30f0152ece6.bindPopup(popup_efbe5070e524fc8769136d383af62923)
+        ;
+
+        
+    
+    
+                marker_107d6c047d53e2d68f7cb30f0152ece6.setIcon(icon_237c53d25b90a2f8a86dd5e58d5b19d1);
+            
+    
+            var marker_bc525d0f601a3943f07cfc6b1f957ac7 = L.marker(
+                [51.1813288, 6.8300097],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_22f8f65a50cab330aca7cec463bf9903 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8cda2a06ef39a059f398a750123f0bb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bbee68a17a4e94f4c38c6fe495aee89 = $(`<div id="html_2bbee68a17a4e94f4c38c6fe495aee89" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1243651846</div>`)[0];
+                popup_8cda2a06ef39a059f398a750123f0bb4.setContent(html_2bbee68a17a4e94f4c38c6fe495aee89);
+            
+        
+
+        marker_bc525d0f601a3943f07cfc6b1f957ac7.bindPopup(popup_8cda2a06ef39a059f398a750123f0bb4)
+        ;
+
+        
+    
+    
+                marker_bc525d0f601a3943f07cfc6b1f957ac7.setIcon(icon_22f8f65a50cab330aca7cec463bf9903);
+            
+    
+            var marker_ce6ce0d5b55dd958dc94387aef511531 = L.marker(
+                [51.1814389, 6.8300981],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_e614e129b2f558241efd67027f4e40e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee6d102b02fa2f4b53d739176925da11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b4d299afda3a2537bcc0049d6afae93 = $(`<div id="html_1b4d299afda3a2537bcc0049d6afae93" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1243731024</div>`)[0];
+                popup_ee6d102b02fa2f4b53d739176925da11.setContent(html_1b4d299afda3a2537bcc0049d6afae93);
+            
+        
+
+        marker_ce6ce0d5b55dd958dc94387aef511531.bindPopup(popup_ee6d102b02fa2f4b53d739176925da11)
+        ;
+
+        
+    
+    
+                marker_ce6ce0d5b55dd958dc94387aef511531.setIcon(icon_e614e129b2f558241efd67027f4e40e4);
+            
+    
+            var marker_8352d8909baeecadd659c5ddd3c410ad = L.marker(
+                [51.2394971, 6.8040692],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_668747be1db83ff2c11798adcebf0796 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe470e58ca690071cd835f604bfc2cd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a552a435ecac34119d0a3121b59ef9fa = $(`<div id="html_a552a435ecac34119d0a3121b59ef9fa" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1315131642</div>`)[0];
+                popup_fe470e58ca690071cd835f604bfc2cd2.setContent(html_a552a435ecac34119d0a3121b59ef9fa);
+            
+        
+
+        marker_8352d8909baeecadd659c5ddd3c410ad.bindPopup(popup_fe470e58ca690071cd835f604bfc2cd2)
+        ;
+
+        
+    
+    
+                marker_8352d8909baeecadd659c5ddd3c410ad.setIcon(icon_668747be1db83ff2c11798adcebf0796);
+            
+    
+            var marker_04fce9c908678805ec32cd84f6b3f932 = L.marker(
+                [51.2054424, 6.7342044],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_21619c920923adaeaa24f159babb4891 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c17f423cee72fb9aa633791acb3ad6e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6b51018f1e23518df1725d2ddd03751 = $(`<div id="html_b6b51018f1e23518df1725d2ddd03751" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1315324319</div>`)[0];
+                popup_c17f423cee72fb9aa633791acb3ad6e9.setContent(html_b6b51018f1e23518df1725d2ddd03751);
+            
+        
+
+        marker_04fce9c908678805ec32cd84f6b3f932.bindPopup(popup_c17f423cee72fb9aa633791acb3ad6e9)
+        ;
+
+        
+    
+    
+                marker_04fce9c908678805ec32cd84f6b3f932.setIcon(icon_21619c920923adaeaa24f159babb4891);
+            
+    
+            var marker_f9dcfd0c69296bbe3cf5f5a36595ccd4 = L.marker(
+                [51.1979239, 6.8930513],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_7d708c3d59caa95a39294269f31da70b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2e32b070d3212a7e69888ca3ae4f3e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_596471f1af8295f576bbaa54707bc6a1 = $(`<div id="html_596471f1af8295f576bbaa54707bc6a1" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1340120135</div>`)[0];
+                popup_b2e32b070d3212a7e69888ca3ae4f3e9.setContent(html_596471f1af8295f576bbaa54707bc6a1);
+            
+        
+
+        marker_f9dcfd0c69296bbe3cf5f5a36595ccd4.bindPopup(popup_b2e32b070d3212a7e69888ca3ae4f3e9)
+        ;
+
+        
+    
+    
+                marker_f9dcfd0c69296bbe3cf5f5a36595ccd4.setIcon(icon_7d708c3d59caa95a39294269f31da70b);
+            
+    
+            var marker_b04dc7f6e08a0eb0e11b54621b620235 = L.marker(
+                [51.2360357, 6.8554245],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_188f087c59008bdb9bbeed953cb1be2b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1136fc05bbd08f5d96cc76d2f89df8ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46907be24cd22b105d313d3dc992243c = $(`<div id="html_46907be24cd22b105d313d3dc992243c" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1346216110</div>`)[0];
+                popup_1136fc05bbd08f5d96cc76d2f89df8ed.setContent(html_46907be24cd22b105d313d3dc992243c);
+            
+        
+
+        marker_b04dc7f6e08a0eb0e11b54621b620235.bindPopup(popup_1136fc05bbd08f5d96cc76d2f89df8ed)
+        ;
+
+        
+    
+    
+                marker_b04dc7f6e08a0eb0e11b54621b620235.setIcon(icon_188f087c59008bdb9bbeed953cb1be2b);
+            
+    
+            var marker_522bc2dafcda768d0276d668bed5661a = L.marker(
+                [51.2335894, 6.7078414],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_f4d2338143d1b55a1fdaba15df45ea64 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc9a93fca3750cd7d37ca2151e083911 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4cf51c533ca17e414342d55fd4cb39e2 = $(`<div id="html_4cf51c533ca17e414342d55fd4cb39e2" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1408567272</div>`)[0];
+                popup_dc9a93fca3750cd7d37ca2151e083911.setContent(html_4cf51c533ca17e414342d55fd4cb39e2);
+            
+        
+
+        marker_522bc2dafcda768d0276d668bed5661a.bindPopup(popup_dc9a93fca3750cd7d37ca2151e083911)
+        ;
+
+        
+    
+    
+                marker_522bc2dafcda768d0276d668bed5661a.setIcon(icon_f4d2338143d1b55a1fdaba15df45ea64);
+            
+    
+            var marker_a0746f216c8977bea0ace15b9de6f659 = L.marker(
+                [51.193724, 6.7735211],
+                {
+}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+            var icon_5a5248677d5b1bdc1e775c41136b9422 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "dumbbell",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c623a1ba8f498b23c084d72e49c88502 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cafa70996b7adfcff7ceb2f89c51f7e6 = $(`<div id="html_cafa70996b7adfcff7ceb2f89c51f7e6" style="width: 100.0%; height: 100.0%;">OSM: Fitness Station 1429696594</div>`)[0];
+                popup_c623a1ba8f498b23c084d72e49c88502.setContent(html_cafa70996b7adfcff7ceb2f89c51f7e6);
+            
+        
+
+        marker_a0746f216c8977bea0ace15b9de6f659.bindPopup(popup_c623a1ba8f498b23c084d72e49c88502)
+        ;
+
+        
+    
+    
+                marker_a0746f216c8977bea0ace15b9de6f659.setIcon(icon_5a5248677d5b1bdc1e775c41136b9422);
+            
+    
+            var circle_marker_1a1f85ea5f59124dd1ea504a5973f498 = L.circleMarker(
+                [50.40280687384466, 6.6657506483175855],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+        var popup_ea955fedd357a6145fac6f557b4553ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29aa0270483f55f01627694ecccf88d4 = $(`<div id="html_29aa0270483f55f01627694ecccf88d4" style="width: 100.0%; height: 100.0%;">             🔍 Detected<br>             Confidence: 0.537<br>             Area: 300m²<br>             NDVI: 0.340<br>             OSM Distance: 86121m             </div>`)[0];
+                popup_ea955fedd357a6145fac6f557b4553ff.setContent(html_29aa0270483f55f01627694ecccf88d4);
+            
+        
+
+        circle_marker_1a1f85ea5f59124dd1ea504a5973f498.bindPopup(popup_ea955fedd357a6145fac6f557b4553ff)
+        ;
+
+        
+    
+    
+            var circle_marker_be1937c8f9cb1fce7accc23e9be86f69 = L.circleMarker(
+                [50.48550740345392, 7.221667606606828],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+        var popup_d633bb91eb60732d05c2f5baf09b7a70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32a8a5e94545d91712c2b488b2d69180 = $(`<div id="html_32a8a5e94545d91712c2b488b2d69180" style="width: 100.0%; height: 100.0%;">             🔍 Detected<br>             Confidence: 0.423<br>             Area: 200m²<br>             NDVI: 0.437<br>             OSM Distance: 83033m             </div>`)[0];
+                popup_d633bb91eb60732d05c2f5baf09b7a70.setContent(html_32a8a5e94545d91712c2b488b2d69180);
+            
+        
+
+        circle_marker_be1937c8f9cb1fce7accc23e9be86f69.bindPopup(popup_d633bb91eb60732d05c2f5baf09b7a70)
+        ;
+
+        
+    
+    
+            var circle_marker_298066de5e299c2b507b22706c8d7acc = L.circleMarker(
+                [50.51652010205739, 5.815524712110507],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+        var popup_f53772c25e318cc1b28d48989e264a52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e29523429e233016a715560a6218ba23 = $(`<div id="html_e29523429e233016a715560a6218ba23" style="width: 100.0%; height: 100.0%;">             🔍 Detected<br>             Confidence: 0.547<br>             Area: 350m²<br>             NDVI: 0.331<br>             OSM Distance: 127066m             </div>`)[0];
+                popup_f53772c25e318cc1b28d48989e264a52.setContent(html_e29523429e233016a715560a6218ba23);
+            
+        
+
+        circle_marker_298066de5e299c2b507b22706c8d7acc.bindPopup(popup_f53772c25e318cc1b28d48989e264a52)
+        ;
+
+        
+    
+    
+            var circle_marker_9385efdac07ae00659e0021897da3ac8 = L.circleMarker(
+                [50.76462169088517, 7.156265611513976],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+        var popup_79dbfcb6ec39b65acd91e3a217ef78d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6822fb5d033c03df0aa8034f8e51ed1 = $(`<div id="html_c6822fb5d033c03df0aa8034f8e51ed1" style="width: 100.0%; height: 100.0%;">             🔍 Detected<br>             Confidence: 0.538<br>             Area: 200m²<br>             NDVI: 0.339<br>             OSM Distance: 52777m             </div>`)[0];
+                popup_79dbfcb6ec39b65acd91e3a217ef78d0.setContent(html_c6822fb5d033c03df0aa8034f8e51ed1);
+            
+        
+
+        circle_marker_9385efdac07ae00659e0021897da3ac8.bindPopup(popup_79dbfcb6ec39b65acd91e3a217ef78d0)
+        ;
+
+        
+    
+    
+            var circle_marker_50226b457370562ea21d15437f90ba8d = L.circleMarker(
+                [50.836984654293275, 7.401523093112171],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+        var popup_fed8d1179cc1ea397fe886e57d167240 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37bc3ecf4fc00957358acd0aa1403627 = $(`<div id="html_37bc3ecf4fc00957358acd0aa1403627" style="width: 100.0%; height: 100.0%;">             🔍 Detected<br>             Confidence: 0.529<br>             Area: 200m²<br>             NDVI: 0.346<br>             OSM Distance: 67773m             </div>`)[0];
+                popup_fed8d1179cc1ea397fe886e57d167240.setContent(html_37bc3ecf4fc00957358acd0aa1403627);
+            
+        
+
+        circle_marker_50226b457370562ea21d15437f90ba8d.bindPopup(popup_fed8d1179cc1ea397fe886e57d167240)
+        ;
+
+        
+    
+    
+            var circle_marker_c2d6a2e3399942d6b2b4a6ce20090482 = L.circleMarker(
+                [51.4158883615581, 5.979029699842638],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_062f9957a4e6130163ea8d142b3518d0);
+        
+    
+        var popup_0ff6b14d540f7b70bc1115ee2bc4b37d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb983caf741acc0094134982a65cc06b = $(`<div id="html_eb983caf741acc0094134982a65cc06b" style="width: 100.0%; height: 100.0%;">             🔍 Detected<br>             Confidence: 0.393<br>             Area: 100m²<br>             NDVI: 0.314<br>             OSM Distance: 83390m             </div>`)[0];
+                popup_0ff6b14d540f7b70bc1115ee2bc4b37d.setContent(html_eb983caf741acc0094134982a65cc06b);
+            
+        
+
+        circle_marker_c2d6a2e3399942d6b2b4a6ce20090482.bindPopup(popup_0ff6b14d540f7b70bc1115ee2bc4b37d)
+        ;
+
+        
+    
+</script>
+</html>
