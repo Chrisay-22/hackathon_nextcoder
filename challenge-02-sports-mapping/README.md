@@ -1,3 +1,6 @@
+
+[deprecated old ideas!]
+
 # Challenge #2: Mapping the Future of Sports in Public Spaces
 
 ## 🎯 Challenge Overview
