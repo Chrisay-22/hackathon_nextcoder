@@ -75,7 +75,7 @@ class RooftopDetector:
         # Detection parameters
         self.min_area_m2 = 400
         self.max_slope_deg = 5.0
-        self.min_height_m = 15.0
+        self.min_height_m = 5.0  # Lowered to capture more buildings
         self.max_ndvi = 0.3  # Exclude vegetated roofs
     
     def authenticate(self, username: str = None, password: str = None) -> bool:

@@ -387,8 +387,40 @@ def run_complete_detection():
     
     # Step 1: Authenticate
     print("\n1️⃣ AUTHENTICATION")
-    username = "christopher-george@web.de"
-    password = "***REMOVED***"
+    
+    # Load credentials from environment variables or credentials file
+    import os
+    import json
+    from pathlib import Path
+    
+    username = os.getenv('COPERNICUS_USERNAME')
+    password = os.getenv('COPERNICUS_PASSWORD')
+    
+    # Try loading from credentials file if env vars not set
+    if not username or not password:
+        credential_paths = [
+            Path(__file__).parent.parent / 'copernicus_credentials.json',
+            Path.home() / '.copernicus_credentials.json',
+        ]
+        
+        for cred_path in credential_paths:
+            if cred_path.exists():
+                try:
+                    with open(cred_path, 'r') as f:
+                        creds = json.load(f)
+                        username = username or creds.get('username')
+                        password = password or creds.get('password')
+                        if username and password:
+                            print(f"✅ Loaded credentials from {cred_path}")
+                            break
+                except Exception as e:
+                    print(f"⚠️ Could not load {cred_path}: {e}")
+    
+    if not username or not password:
+        print("❌ Credentials not found!")
+        print("   Set COPERNICUS_USERNAME and COPERNICUS_PASSWORD environment variables,")
+        print("   or create copernicus_credentials.json with your credentials.")
+        return None
     
     if not detector.authenticate_copernicus(username, password):
         print("❌ Cannot proceed without authentication")
