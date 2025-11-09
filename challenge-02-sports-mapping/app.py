@@ -189,8 +189,8 @@ if should_show_results:
     with tab1:
         st.subheader("Interactive Map")
         
-        # Filter toggle - moved to map tab, default to Top 10
-        show_top_10 = st.checkbox("🏆 Show only Top 10 candidates", value=True, key="map_filter")
+        # Filter toggle - moved to map tab, show all by default
+        show_top_10 = st.checkbox("🏆 Show only Top 10 candidates", value=False, key="map_filter")
         
         # Prepare features for display
         features_sorted = sorted(features, key=lambda x: x['properties']['suitability_score'], reverse=True)

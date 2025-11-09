@@ -1,196 +1,179 @@
+# 🏗️⚽ Rooftop Soccer Field Detector
 
-[deprecated old ideas!]
+**Identify suitable rooftops for soccer field installation using satellite imagery and AI**
 
-# Challenge #2: Mapping the Future of Sports in Public Spaces
+## 🎯 Project Overview
 
-## 🎯 Challenge Overview
+This project uses **Copernicus Sentinel-2 satellite data** and **computer vision** to automatically detect flat, large rooftops in urban areas that could be converted into soccer fields. We analyze building height, roof slope, surface area, and vegetation to score each rooftop's suitability.
 
-**Mission:** Use Earth Observation and geospatial data to identify and map existing sports fields globally, then combine with mobility and population data to discover opportunities for new public sports infrastructure.
+### Why Rooftop Soccer Fields?
 
-### Key Questions to Answer
-- Where are people already engaging in sports outdoors?
-- Which neighborhoods show high demand but lack sports infrastructure?
-- How can we use space data to make data-driven, inclusive decisions for community sports development?
+- 🏙️ **Urban space optimization** - utilize unused rooftop space
+- ⚽ **Increase sports access** - bring fields closer to communities  
+- 🌱 **Sustainability** - repurpose existing structures
+- 👥 **Social impact** - provide sports infrastructure in dense urban areas
 
-## 🧠 Strategic Considerations
+## ✨ Features
 
-### 1. Spatial Clustering Approaches
+- 🛰️ **Satellite-based detection** using Sentinel-2 imagery and Copernicus DEM
+- 🤖 **Computer vision** for rooftop extraction and analysis
+- 📊 **Suitability scoring** based on size, slope, height, and surface type
+- 🗺️ **Interactive web app** built with Streamlit
+- 📍 **Multi-city support** - Berlin, Düsseldorf (more coming soon)
+- 🎨 **Visual analytics** with color-coded suitability maps
 
-#### Hybrid Multi-Scale Strategy
-- **Primary Level:** Administrative boundaries (e.g., German Landkreise)
-  - *Rationale:* Align with real decision-making units and budget allocation
-  - *Use Case:* Policy recommendations and municipal planning
-  
-- **Secondary Level:** Hexagonal grids (uniform spatial distribution)
-  - *Rationale:* Unbiased spatial statistics and standardized analysis
-  - *Use Case:* Fair comparison across different geographical areas
-  
-- **Tertiary Level:** Population-weighted clusters
-  - *Rationale:* Reflect actual usage patterns and accessibility
-  - *Use Case:* Demand modeling and facility optimization
+## 🚀 Quick Start
 
-### 2. Demand Analysis Framework
+### Prerequisites
 
-#### "Bedarfsdeckung" (Meeting Existing Demand)
-**Indicators of Current Unmet Demand:**
-- High population density + long travel times to sports facilities
-- Social media activity analysis (Strava heat maps, sports check-ins)
-- Health statistics (obesity rates, sedentary lifestyle indicators)
-- Municipal survey data and citizen requests
-- School sports facility usage patterns
+- Python 3.11+
+- Copernicus Data Space account ([register here](https://dataspace.copernicus.eu/))
 
-#### "Bedarfsweckung" (Creating New Demand)
-**Indicators of Latent Demand Potential:**
-- Demographic composition (young families, students, aging population)
-- Urban development patterns and new residential areas
-- Economic indicators and disposable income levels
-- Cultural factors and sports popularity trends
-- Existing recreational infrastructure (parks, walking paths)
+### Installation
 
-### 3. Sports Facility Categorization
+```powershell
+# Clone the repository
+git clone https://github.com/Chrisay-22/hackathon_nextcoder.git
+cd hackathon_nextcoder/challenge-02-sports-mapping
 
-#### Multi-Dimensional Classification System
-
-**Accessibility Spectrum:**
-- 🔓 **Public:** Freely accessible 24/7
-- 🔒 **Semi-Public:** Limited hours, membership required
-- 🏢 **Private:** Exclusive access (schools, clubs, companies)
-
-**Activity Diversity Index:**
-- 🏀 **Single-Sport:** Football pitch, tennis court
-- ⚽ **Multi-Sport:** Combined facilities (basketball + volleyball)
-- 🏋️ **Universal:** Calisthenics parks, general fitness areas
-
-**Attractiveness & Usage Factors:**
-- **Equipment Quality:** Modern vs. deteriorated facilities
-- **Safety & Lighting:** Evening usage capability
-- **Amenities:** Parking, restrooms, changing facilities
-- **Maintenance Level:** Regular upkeep vs. abandoned
-
-### 4. Beyond Distance: True Accessibility Metrics
-
-#### Multi-Modal Accessibility Assessment
-
-**Walking Accessibility (Primary Zone):**
-- 5-10 minute walking catchment areas
-- Account for pedestrian infrastructure quality
-- Consider safety factors (lighting, crime statistics)
-
-**Cycling Accessibility (Secondary Zone):**
-- 15-20 minute cycling routes
-- Bike lane availability and safety
-- Bike parking facilities at destinations
-
-**Public Transport Integration:**
-- Transit time + frequency analysis
-- Last-mile connectivity from stations
-- Cost considerations for regular usage
-
-**Topographical & Infrastructure Barriers:**
-- Physical obstacles: rivers, highways, railways
-- Elevation changes and terrain difficulty
-- Seasonal accessibility factors
-
-## 🛠 Technical Implementation Plan
-
-### Phase 1: Data Collection & Processing (Day 1)
-
-#### Primary Data Sources
-**Copernicus/EU Space Data:**
-- **Sentinel-2:** High-resolution Earth observation for sports field detection
-- **Copernicus Land Monitoring Service:** Land use classification data
-- **Urban Atlas:** Detailed urban area mapping
-
-**Complementary Data:**
-- **Population Data:** Eurostat, national census data
-- **OpenStreetMap:** Existing sports facility mapping
-- **Transport Networks:** GTFS data, cycling infrastructure
-- **Demographic Data:** Age distribution, income levels
-
-#### Sports Field Detection Pipeline
-```
-Satellite Imagery → Computer Vision Model → Field Classification → Validation → Database
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-**Computer Vision Approach:**
-1. **Preprocessing:** Atmospheric correction, cloud masking
-2. **Feature Detection:** Edge detection, geometric shape recognition
-3. **Classification:** CNN model trained on sports field types
-4. **Validation:** Cross-reference with OSM and local data
+### Setup Credentials
 
-### Phase 2: Analysis & Modeling (Day 2)
+Create `copernicus_credentials.json` in the project root:
 
-#### Accessibility Analysis Engine
-```python
-# Pseudo-code structure
-class AccessibilityAnalyzer:
-    def calculate_catchment_areas(self, facility_locations, transport_network):
-        # Multi-modal isochrone calculation
-        pass
-    
-    def assess_population_coverage(self, catchments, population_data):
-        # Population within accessibility zones
-        pass
-    
-    def identify_gaps(self, coverage_map, demand_indicators):
-        # Underserved areas identification
-        pass
+```json
+{
+  "username": "your_copernicus_username",
+  "password": "your_copernicus_password"
+}
 ```
 
-#### Demand Prediction Model
-- **Input Variables:** Demographics, existing facilities, usage patterns
-- **ML Approach:** Gradient boosting for demand score prediction
-- **Output:** Heat map of potential demand vs. current supply
+Or set environment variables:
+```powershell
+$env:COPERNICUS_USERNAME = "your_username"
+$env:COPERNICUS_PASSWORD = "your_password"
+```
 
-### Phase 3: Application Development (Day 3)
+### Run the App
 
-#### MVP Features
+```powershell
+python -m streamlit run app.py
+```
 
-**Interactive Web Dashboard:**
-- 🗺️ **Map Interface:** Leaflet.js with facility overlays
-- 📊 **Analytics Panel:** Demand vs. supply metrics
-- 🎯 **Recommendation Engine:** Optimal locations for new facilities
-- 📈 **Impact Simulator:** Population coverage improvement predictions
+The app will open at `http://localhost:8501`
 
-**Core Functionalities:**
-1. **Facility Explorer:** Browse existing sports infrastructure
-2. **Gap Analyzer:** Identify underserved areas
-3. **Site Recommender:** Suggest optimal locations for new facilities
-4. **Impact Calculator:** Predict usage and community benefit
+## 🎨 How to Use
 
-## 📊 Success Metrics
+1. **Select a city** (Berlin or Düsseldorf)
+2. **Choose coverage area** (full city or specific district)
+3. **Click "Start Detection"** - processing takes 2-15 minutes depending on area size
+4. **Explore results** in three tabs:
+   - 🗺️ **Map**: Interactive visualization with color-coded rooftops
+   - 📊 **Data Table**: Sortable table with all metrics
+   - 📈 **Statistics**: Distribution charts and aggregated stats
 
-### Technical KPIs
-- **Detection Accuracy:** >85% sports field identification rate
-- **Coverage Analysis:** Population % within accessible distance
-- **Prediction Validation:** Compare recommendations with actual usage data
+### Understanding the Colors
 
-### Business Impact
-- **Municipal Value:** Actionable insights for city planning
-- **Community Benefit:** Improved sports access equity
-- **ROI Demonstration:** Cost-benefit analysis of new facilities
+Rooftops are color-coded by suitability score:
 
-## 🎯 Team Composition Needs
+- 🟢 **Dark Green** (0.9-1.0): Excellent candidates
+- 🟢 **Green** (0.8-0.9): Very good
+- 🔵 **Blue** (0.7-0.8): Good
+- 🟠 **Orange** (0.6-0.7): Moderate
+- 🔴 **Red** (<0.6): Low suitability
 
-### Core Skills Required
-- **🗺️ GIS Specialist:** Spatial analysis and mapping
-- **🤖 ML Engineer:** Computer vision and predictive modeling
-- **💻 Full-Stack Developer:** Web application development
-- **📈 Business Analyst:** Market research and validation
-- **🎨 UX/UI Designer:** User experience and visualization
+## 🔧 Detection Criteria
 
-### Potential Collaboration Partners
-- **Urban Planning Students:** Domain expertise
-- **Sports Science Researchers:** Usage pattern insights
-- **Municipal Representatives:** Validation and feedback
+### What Makes a Good Rooftop?
 
-## 🚀 Next Steps
+**Size Requirements:**
+- Minimum: 400 m² (small pitch)
+- Maximum: 10,000 m²
 
-1. **Data Source Validation:** Confirm access to required datasets
-2. **Technical Feasibility:** Test computer vision models on sample data
-3. **Stakeholder Interviews:** Validate assumptions with potential users
-4. **MVP Scope Refinement:** Define minimal viable features for 3-day timeline
+**Structural:**
+- Height: > 5m (lowered threshold for better coverage)
+- Slope: < 5° (flat surface)
+
+**Surface:**
+- NDVI < 0.3 (non-vegetated, e.g., concrete/metal)
+- High reflectance
+- Clear boundaries
+
+**Shape:**
+- Aspect ratio < 4.0 (not too elongated)
+
+## 📁 Project Structure
+
+```
+challenge-02-sports-mapping/
+├── app.py                          # Streamlit web application
+├── requirements.txt                # Python dependencies
+├── copernicus_credentials.json     # Your credentials (gitignored)
+├── rooftop_detection/
+│   ├── rooftop_detector.py         # Core detection logic
+│   └── README.md                   # Technical documentation
+├── results/
+│   ├── berlin_rooftops.geojson     # Detection results (38 MB)
+│   ├── berlin_rooftops_compressed.geojson  # Compressed (8 MB)
+│   ├── berlin_rooftops_map.html    # Standalone map
+│   ├── create_map.py               # Map generation script
+│   └── compress_geojson.py         # GeoJSON compression utility
+├── src/                            # Legacy detection scripts
+└── docs/                           # Architecture & data docs
+```
+
+## 🛰️ Technology Stack
+
+- **Satellite Data**: Copernicus Sentinel-2 L2A imagery, DEM (10m)
+- **Computer Vision**: OpenCV for contour detection
+- **Geospatial**: Shapely, GeoPandas, Rasterio
+- **Web App**: Streamlit, Folium for interactive maps
+- **API**: Sentinel Hub Process API
+
+## 📊 Results
+
+### Berlin Detection (Full City)
+
+- 🏗️ **12,190 rooftops** detected
+- 📏 Average area: ~850 m²
+- 🎯 Average suitability: 0.71
+- 🟢 Top candidates: 2,400+ with score > 0.8
+
+Results available in `results/berlin_rooftops.geojson` (or compressed version at 8 MB).
+
+## 🗺️ Available Locations
+
+### Berlin
+- Full city coverage
+- Districts: Mitte, Charlottenburg, Friedrichshain, Kreuzberg, Neukölln, Pankow, Spandau, Steglitz
+
+### Düsseldorf
+- Full city coverage
+- Districts: Altstadt, Stadtmitte, Pempelfort, Oberkassel, Bilk, Unterrath, Benrath
+
+## 🤝 Contributing
+
+Contributions welcome! Areas for improvement:
+
+- [ ] Add more cities
+- [ ] Improve detection algorithm (ML-based segmentation)
+- [ ] Add structural engineering feasibility checks
+- [ ] Integrate with urban planning APIs
+- [ ] Cost estimation model
+
+## 📝 License
+
+MIT License - see LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- **Copernicus/ESA** for satellite data access
+- **OpenStreetMap** contributors
+- Built for **NextCoder Hackathon 2024**
 
 ---
 
-**Status:** Planning Phase | **Priority:** High | **Estimated Effort:** 3 days (hackathon duration)
+**Note**: This is a proof-of-concept for urban planning and sports infrastructure development. Actual rooftop conversions require structural engineering assessments, permits, and safety evaluations.
